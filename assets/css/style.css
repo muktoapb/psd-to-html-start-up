@@ -1,0 +1,142 @@
+/*
+
+Template Name : Name
+Author: Mahidul Islam Mukto
+website : htt://mukto.info
+
+*/
+
+/*===========
+CSS INDEX
+---------
+
+*Base CSS
+*Header CSS
+    *Text logo support
+    *Menu css
+*Hero area CSS
+*Company details area CSS
+*Call to action area CSS
+*Blog area CSS
+*Footer area CSS
+
+============*/
+
+/*===========
+Base CSS
+============*/
+
+/*google font*/
+/*@import url('https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i');*/
+
+body {
+    font-family: 'Nunito';
+    font-size: 15px;
+    color: #999;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #172844;
+}
+
+p {
+    color: #9299A6;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+.section_padding {
+    padding: 100px 0;
+}
+
+/*===========
+Header CSS
+============*/
+header {
+    border-bottom: 2px solid #f2f5fa;
+    padding: 20px 0 5px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+/*--------------
+Text logo support
+------------*/
+.text-logo {
+    color: #3d3d3d;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.text-logo span {
+    color: #4d98f7;
+}
+
+/*--------------
+Menu css
+------------*/
+.menu_icon {
+    display: none;
+}
+
+.navigation > ul {
+    list-style: outside none none;
+}
+
+.navigation li {
+    display: inline-block;
+    position: relative;
+}
+
+.navigation a {
+  color: #253856;
+  padding: 5px 15px;
+}
+
+.dropdown ul li {
+    display: block;
+}
+
+.dropdown > ul {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 0 1px #ddd;
+    display: none;
+    margin-top: 5px;
+    padding: 10px 0 0;
+    position: absolute;
+    width: 100px;
+    z-index: 9;
+}
+
+.navigation a:hover,
+.signin:hover > a {
+    color: #6bafff;
+}
+
+.navigation {
+    float: left;
+    padding-top: 10px;
+    width: 80%;
+}
+
+.dropdown::after {
+  color: #2d3b51;
+  content: "";
+  font-family: FontAwesome;
+  margin-left: -10px;
+  position: absolute;
+  right: -5px;
+  top: 0;
+}
+

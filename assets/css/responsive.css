@@ -1,0 +1,84 @@
+/*Large screen*/
+@media only screen and (min-width:1500px) {
+}
+
+/* Tablet Layout waid */
+@media only screen and (min-width:992px) and (max-width:1024px) {
+}
+
+/* tablet */
+@media only screen and (min-width:768px) and (max-width:991px) {
+}
+
+/* Mobile Layout */
+@media only screen and (max-width:767px) {
+	.menu_icon {
+		display: block;
+	}
+
+	.menu_icon i {
+		cursor: pointer;
+		float: right;
+		font-size: 25px;
+	}
+
+	.menu {
+		background: #fff none repeat scroll 0 0;
+		box-shadow: 0 0 2px #ddd;
+		position: absolute;
+		right: 0;
+		top: 53px;
+		z-index: 9;
+		display: none;
+	}
+
+	.navigation > ul li {
+		display: block;
+		padding: 5px 0;
+	}
+
+	.navigation {
+		width: 100%;
+	}
+
+	.signin, .navigation {
+		float: none;
+	}
+
+	.navigation > ul {
+		padding: 0;
+	}
+
+	.signin {
+		padding: 0 10px;
+	}
+
+	.dropdown > ul {
+		background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+		box-shadow: none;
+		padding: 0;
+		position: relative;
+	}
+
+	.dropdown::after {
+		position: absolute;
+		right: 10px;
+		top: 0;
+	}
+
+	.dropdown > ul li {
+		padding: 5px 0;
+	}
+
+	header {
+		padding: 15px 0;
+	}
+}
+
+/* small scren*/
+@media only screen and (max-width:339px) {
+	.menu {
+		top: 42px;
+	}
+
+}
