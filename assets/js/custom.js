@@ -1,61 +1,65 @@
- $(document).ready(function () {
+(function ($) {
+    "use strict";
 
-     $(".mobile_btn").click(function () {
-         $("#main_menu").toggle(300);
-     });
+    jQuery(document).ready(function ($) {
 
-
-     // slide
-     $(".testimonial_slider").owlCarousel({
-
-         nav: true,
-         navText: ["&#10092;", "&#10093;"],
-         dots: false,
-         autoplay: true,
-         loop: true,
-         mouseDrag: true,
-         touchDrag: true,
-         responsive: {
-             // breakpoint from 0 up
-             0: {
-                 items: 1,
-             },
-             
-             // breakpoint from 991 up
-             767: {
-                 items: 2,
-             },
-             // breakpoint from 991 up
-             991: {
-                 items: 3,
-             }
-             
-         }
-     });
-     //  mobile menu
+        //Menu
+        $("#mobileMenu").click(function () {
+            $("#menuArea").toggle(400);
+        });
 
 
-     // Add smooth scrolling to all links
-     $("a").on('click', function (event) {
+        jQuery(window).resize(function () {
+            var screenwidth = jQuery(window).width();
+            if (screenwidth > 767) {
+                jQuery("#menuArea").removeAttr("style");
 
-         // Make sure this.hash has a value before overriding default behavior
-         if (this.hash !== "") {
-             // Prevent default anchor click behavior
-             event.preventDefault();
+            }
+        });
+        // Service Slider
+        $('.service_slider_wrapper').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 3,
+            arrows: false,
+            dotsClass:'slider_dot',
+            slidesToScroll: 1,
+            responsive: [
+              {
+                breakpoint: 991,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 575,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          });
 
-             // Store hash
-             var hash = this.hash;
+        //       scroll_top   
+        $(window).scroll(function () {
+            if ($(this).scrollTop()) {
+                $('#toTop').fadeIn();
+            } else {
+                $('#toTop').fadeOut();
+            }
+        });
 
-             // Using jQuery's animate() method to add smooth page scroll
-             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-             $('html, body').animate({
-                 scrollTop: $(hash).offset().top
-             }, 800, function () {
+        $("#toTop").click(function () {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 1000);
+        });
 
-                 // Add hash (#) to URL when done scrolling (default click behavior)
-                 window.location.hash = hash;
-             });
-         } // End if
-     });
 
- });
+    });
+
+
+}(jQuery));
