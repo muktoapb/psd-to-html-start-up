@@ -30,61 +30,6 @@ a:focus {
 img {
     max-width: 100%
 }
-
-/* Header area
-============== */
-.header_area {
-    padding: 15px 0;
-    transition: all .7s;
-}
-.header_area.stiky {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: #000;
-    color: #fff;
-    z-index: 99;
-    padding: 5px 0;
-}
-
-.admin-bar .header_area.stiky {
-    top: 32px;
-}
-ul#menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: right;
-}
-
-ul#menu li {
-    display: inline-block;
-    position: relative;
-}
-
-ul#menu li a {
-    display: block;
-    padding: 10px;
-}
-.header_area.stiky ul#menu li a{
-    color: #ffffff;
-}
-.mobile_menu {
-    display: none;
-}
-
-/* breadcam */
-.bredcam_area {
-    padding: 120px 0;
-}
-
-.bredcam_area a {
-    color: #fff;
-}
-/* error */
-.error_page {
-    height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+*{
+    outline: none;
 }
